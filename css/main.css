@@ -1,0 +1,360 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+body{
+	color: #000;
+	background: #3C4349;
+    padding: 0;
+    margin: 0;
+	font-family: 'SFRegular';
+    -webkit-tap-highlight-color: transparent;
+}
+@font-face {
+    font-family: 'SFRegular';
+	src: url(../fonts/SF/SFUIText-Regular.woff); 
+}
+@font-face {
+    font-family: 'SFLight';
+	src: url(../fonts/SF/SFUIText-Light.woff); 
+}
+.container{
+	max-width: 877px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #323232;
+}
+button, input{
+	font-family: 'SFRegular';
+	border: none;
+	outline: none;
+	margin: 0;
+}
+button{
+	padding: 0;
+	margin: 0;
+    background: none;
+    cursor: pointer;
+}
+P{
+	margin: 0;
+}
+h1,h2,h3,h4{
+	margin: 0;
+}
+.wrapper{
+	height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-inner-top{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 112px;
+}
+#back{
+	width: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header .button{
+	color: #fff;
+	text-transform: uppercase;
+}
+.details{
+	position: relative;
+}
+.details-block{
+	display: none;
+	box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.14), 0px 3px 16px rgba(0, 0, 0, 0.12), 0px 5px 6px rgba(0, 0, 0, 0.2);
+	border-radius: 12px;
+	position: absolute;
+	background: #fff;
+}
+.header .details-block{
+	min-width: 166px;
+	top: 32px;
+}
+.details-block-active{
+	display: block;
+}
+.block-wrapper{
+	padding: 23px 20px;
+}
+.order-number, .payer-id{
+	display: flex;
+	font-size: 12px;
+	justify-content: space-between;
+}
+.order-number{
+	margin-bottom: 26px;
+}
+.text{
+	color: #000000;
+    opacity: 0.5;
+}
+.wrapper{
+	padding: 41px 0;
+}
+.page-content{
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+.heading{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.balance{
+	display: flex;
+	width: 106px;
+	margin-right: 30px;
+	justify-content: space-between;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.balance-text{
+	opacity: 0.4;
+}
+.tab-list{
+	display: flex;
+	width: 235px;
+	justify-content: space-between;
+}
+.li-item{
+	cursor: pointer;
+	background: transparent;
+	color: #fff;
+	font-size: 12px;
+	padding: 10px 20px;
+	border-radius: 8px;
+}
+.active{
+	background: #444B50;
+}
+.forms-card{
+	width: 873px;
+	justify-content: space-between;
+	display: flex;
+}
+.forms-card-wrap:first-child{
+	width: 300px;
+}
+.car-input-item{
+	background: #47494E;
+	position: relative;
+	border-radius: 5px;
+	height: 63px;
+	margin-bottom: 12px;
+}
+.car-input-item-wrap{
+	align-items: center;
+	display: flex;
+	padding: 22px 16px;
+}
+.car-input-item .card-item-number{
+	font-size: 12px;
+	color: #fff;
+	width: 160px;
+}
+.card-name{
+	margin-right: 37px;
+}
+.car-input-item .details{
+	margin-left: auto;
+}
+.car-input-item .details-block{
+	top: 0;
+}
+.car-input-item button{
+	display: flex;
+	margin-bottom: 9px;
+}
+.car-input-item button:last-child{
+	margin-bottom: 0;
+}
+.car-input-item button i{
+	margin-right: 9px;
+}
+#add-popup{
+	padding: 21px 16px;
+	width: 100%;
+	border-radius: 5px;
+	border: 2px solid #fff;
+	color: #fff;
+	opacity: 0.2;
+}
+.footer-inner{
+	display: flex;
+	justify-content: space-between;
+}
+.footing-wrap{
+	display: flex;
+	justify-content: space-between;
+	width: 300px;
+}
+.footing-wrap:last-child{
+	width: 268px;
+	align-items: center;
+}
+.price-wrap{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 56px;
+	color: #fff;
+}
+.total-price-name{
+	font-size: 12px;
+}
+.total-price-text{
+	display: flex;
+	font-size: 24px;
+	font-weight: bold;
+}
+.check-card{
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	color: #fff;
+}
+.checkbox{
+	opacity: 0;
+    position: absolute;
+}
+.checkbox,
+.checkbox-label{
+	display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+.checkbox,
+.checkbox-label::before{
+	content: '';
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.checkbox:checked + .checkbox-label::before{
+	background: url(../img/Vector1.svg) no-repeat 50%;
+	top: 0;
+}
+.checkbox-label{
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.processed-pay button{
+	width: 141px;
+	text-transform: uppercase;
+	padding: 9px;
+	color: #fff;
+	background: linear-gradient(360deg, #67C870 0%, #81E79B 99.99%, rgba(103, 200, 112, 0) 100%);
+    border-radius: 8px;
+}
+.footer-descr-link , .footer-descr-link a{
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.footer-descr-link{
+	line-height: 24px;
+	margin-top: 69px;
+	text-align: center;
+	color: #A6A6A6;
+}
+.footer-descr-link a{
+	color: #fff;
+}
+.card{
+	position: relative;
+	width: 354px;
+	height: 223px;
+	background: #47494E;
+	border-radius: 5px;
+}
+.card-wrapper{
+	padding: 20px;
+	color: #fff;
+}
+.card-heading{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+.card-item-number{
+    line-height: 1;
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+    cursor: pointer;
+}
+.card .card-item-number{
+	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 35px;
+}
+.card .card-num{
+	width: 16px;
+    display: inline-block;
+}
+.card-footer{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.date{
+	flex-wrap: wrap;
+    font-size: 14px;
+    display: inline-flex;
+    width: 80px;
+}
+.label-date-title{
+	margin-bottom: 10px;
+	font-size: 12px;	
+}
+.svs{
+	width: 122px;
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+}
+.svs-code{
+	width: 92px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+    height: 38px;
+	background: #FFFFFF;
+    opacity: 0.7;
+	border-radius: 100px;
+	color: #4E5055;
+}
+/* Стили swiper */
+.forms-card-wrap .swiper{
+	width: 364px;
+}
